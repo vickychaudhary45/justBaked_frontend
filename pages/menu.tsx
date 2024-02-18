@@ -4,7 +4,7 @@ import styles from "../styles/css/menu.module.scss";
 import Image from "next/image";
 import Main from "../components/shared/Menu/Main";
 
-const menu = () => {
+const Menu = () => {
   const [activeTab, setActiveTab] = useState("Main");
   const changeTab = (type: string) => {
     setActiveTab(type);
@@ -50,4 +50,4 @@ const menu = () => {
   );
 };
 
-export default menu;
+export default Menu;

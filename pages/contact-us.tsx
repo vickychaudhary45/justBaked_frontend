@@ -5,7 +5,7 @@ import DraftsIcon from "@mui/icons-material/Drafts";
 import CallIcon from "@mui/icons-material/Call";
 import { useForm } from "react-hook-form";
 
-const contact = () => {
+const Contact = () => {
   const {
     register,
     handleSubmit,
@@ -114,4 +114,4 @@ const contact = () => {
   );
 };
 
-export default contact;
+export default Contact;

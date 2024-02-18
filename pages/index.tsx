@@ -6,7 +6,7 @@ import AboutBlock from "@/components/AboutBlock";
 import BookTableBlock from "@/components/BookTableBlock";
 import ChefsBlock from "@/components/ChefsBlock";
 
-function index() {
+function Index() {
   const homeMenuItemsData = [
     {
       name: "Starters Menu",
@@ -23,7 +23,7 @@ function index() {
   return (
     <div className="home">
       <div className="home-img">
-        <img src="/images/bg-img2.jpg" alt="home-img.jpg" />
+        <Image src="/images/bg-img2.jpg" alt="home-img.jpg" width={1000} height={600} />
       </div>
       <div className="home-text-block">
         <div home-txt>
@@ -41,8 +41,8 @@ function index() {
       <div className="home-menu-block">
         <h3>Menus</h3>
         <div className="menu-info">
-          {homeMenuItemsData.map((itm) => (
-            <div className="home-menu-itm">
+          {homeMenuItemsData.map((itm, key) => (
+            <div className="home-menu-itm" key={key}>
               <Link href="/menu">
                 <Image
                   src={itm.img_src}
@@ -69,4 +69,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
