@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Lobster&family=Merriweather&family=PT+Serif&family=Roboto&family=Rubik+Spray+Paint&family=Secular+One&family=Shrikhand&display=swap");
+@import "./mixin.scss";
+
+.contact_us_block {
+  font-family: "Roboto";
+  height: auto;
+  .top_block {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    img {
+      width: 100%;
+      height: 35vh;
+      opacity: 0.2;
+    }
+    &::before {
+      content: "Contact Us";
+      color: white;
+      font-size: 50px;
+      position: absolute;
+      top: 25%;
+      left: 37%;
+      font-weight: 800;
+      animation: slideFromTop 0.7s ease-out;
+      @keyframes slideFromTop {
+        from {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @include xsm {
+        font-size: 40px;
+        top: 25vh;
+        left: 30vw;
+        font-weight: 600;
+      }
+      @include sm {
+        font-size: 65px;
+        top: 20vh;
+        left: 25vw;
+        font-weight: 600;
+      }
+      @include md {
+        font-size: 75px;
+        top: 20%;
+        left: 25%;
+        font-weight: 600;
+      }
+    }
+  }
+  .middle_block {
+    margin: 100px auto 60px auto;
+    h1 {
+      font-size: 45px;
+      font-weight: 600;
+      text-align: center;
+    }
+    .middle_block_ele {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      .middle_itm {
+        flex: 1;
+        h3 {
+          font-size: 25px;
+          color: orange;
+          font-weight: 800 !important;
+        }
+        p {
+          display: flex;
+          justify-content: center;
+          font-size: 18px;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+        @include sm {
+          flex-basis: 48%;
+          text-align: center;
+        }
+        @include md {
+          flex-basis: 48%;
+          text-align: center;
+        }
+      }
+      @include xsm {
+        flex-direction: column;
+        justify-content: center;
+      }
+      @include sm {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .bottom_block {
+    display: flex;
+    padding: 50px;
+    .left_block {
+      width: 50%;
+      iframe {
+        width: 100%;
+      }
+      @include xsm {
+        width: 100%;
+      }
+      @include sm {
+        width: 90%;
+        margin: auto;
+      }
+    }
+    .right_block {
+      width: 50%;
+      line-height: 3;
+      margin-left: 40px;
+      @include xsm {
+        line-height: 2;
+        margin-left: 1px;
+        margin-top: 54px;
+        width: 100%;
+      }
+      @include sm {
+        line-height: 2;
+        margin: 50px auto auto auto;
+        width: 90%;
+      }
+      input {
+        border: 2px solid #d3d3d3;
+        width: 80%;
+        height: 30px;
+        margin-top: -10px;
+        @include xsm {
+          width: 97%;
+          margin-top: 0;
+        }
+        @include sm {
+          width: 97%;
+          margin-top: 0;
+        }
+        @include md {
+          margin-top: -9px;
+        }
+      }
+      textarea {
+        border: 2px solid #d3d3d3;
+        max-width: 80%;
+        height: 100px;
+        @include xsm {
+          max-width: 97%;
+        }
+        @include sm {
+          max-width: 100%;
+        }
+        &::placeholder {
+          font-size: 15px;
+          font-family: "Roboto";
+        }
+      }
+      .form_input {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        width: 80%;
+        height: 40px;
+        margin-top: 30px;
+        background-color: #fea116;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 18px;
+        &:hover {
+          background-color: #f5761a;
+          cursor: pointer;
+        }
+        @include xsm {
+          width: 100%;
+        }
+        @include sm {
+          width: 100%;
+        }
+      }
+    }
+    @include xsm {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+    @include sm {
+      flex-direction: column;
+      padding: 0;
+      width: 100%;
+    }
+    @include md {
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Lobster&family=Merriweather&family=PT+Serif&family=Roboto&family=Rubik+Spray+Paint&family=Secular+One&family=Shrikhand&display=swap");
+.footer {
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (max-width: 840px) {
+    flex-wrap: wrap;
+  }
+  .imageContainer {
+    margin: 10px;
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.row {
+  align-items: center;
+}
+
+.up_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.down_column{
+  padding: 0px;
+  // gap: 100px;
+}
+
+.rowD {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+@media only screen and (max-width: 840px) {
+  .rowD {
+    display: block;
+    // display: flex;
+    justify-content: center;
+    // gap: 100px;
+  }
+  .down_column{
+    padding-bottom: 50px;
+  }
+}
+
+
+.section_title {
+  color: #111;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5em;
+  line-height: 1.4;
+  margin-bottom: 70px;
+}
+
+.content_section {
+  margin-bottom: 140px;
+}
+
+.contact_item {
+  display: flex;
+  color: #444;
+  column-gap: 100px;
+}
+.contact_item:first-child {
+  column-gap: 10px;
+}
+
+.ci_icon {
+  padding-top: 10px;
+  border-radius: 20px;
+  padding-right: 5px;
+  img {
+    transform: rotate(310deg);
+    border-radius: 3px;
+    padding: 5px;
+    background-color: #111;
+  }
+}
+.ci_icon_location {
+  img {
+    transform: rotate(40deg);
+  }
+}
+.ci_icon_email {
+  padding-top: 10px;
+  border-radius: 20px;
+  padding-right: 5px;
+  img {
+    transform: rotate(40deg);
+    border-radius: 3px;
+    padding: 0px;
+    background-color: #111;
+  }
+}
+
+.ci_title {
+  margin-bottom: 1px;
+  color: #777;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  line-height: 1.6;
+}
+
+.ci_text {
+  color: #777 !important;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container{
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 100px;
+}
+
+.Dish{
+  padding: 0px;
+}
+
+.fbDish {
+  display: flex;
+  gap: 20px; // Adjust the space between links as needed
+  text-align: center;
+  justify-content: center;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+}
+
+.footer_made{
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}

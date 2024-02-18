@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Lobster&family=Merriweather&family=PT+Serif&family=Roboto&family=Rubik+Spray+Paint&family=Secular+One&family=Shrikhand&display=swap");
+@import "./mixin.scss";
+
+.header {
+  font-family: "Roboto";
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  .left-section {
+    width: 200px;
+    text-align: center;
+  }
+  .right-section {
+    display: flex;
+    margin-right: 30px;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        padding: 0 20px;
+        list-style: none;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: #fea116;
+            text-decoration: underline;
+          }
+        }
+        .active {
+          color: #fea116;
+          text-decoration: underline;
+        }
+      }
+    }
+    .book-table-btn {
+      font-weight: 600;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-color: #fea116;
+      border-radius: 3px;
+      padding: 10px 25px;
+      &:hover {
+        background-color: #f5761a;
+        cursor: pointer;
+      }
+      a {
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+    }
+    @include md_double {
+      display: none;
+    }
+  }
+  .medium-devices {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    margin-top: 104px;
+    margin-left: -195px;
+    width: 100vw !important;
+    height: 100vh;
+    margin-right: -80px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      li {
+        padding: 30px 20px;
+        list-style: none;
+        font-size: 35px;
+        a {
+          color: white;
+          text-decoration: none;
+          &:hover {
+            color: #fea116;
+            text-decoration: underline;
+          }
+        }
+        .active {
+          color: #fea116;
+          text-decoration: underline;
+        }
+        @include xsm {
+          font-size: 20px;
+          padding: 20px;
+        }
+      }
+    }
+    .book-table-btn {
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-color: #fea116;
+      border-radius: 3px;
+      padding: 10px 40px;
+      width: 310px;
+      &:hover {
+        background-color: #f5761a;
+        cursor: pointer;
+      }
+      a {
+        margin-left: 20px;
+        &:hover {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      @include xsm {
+        width: 190px;
+      }
+    }
+    @include xsm {
+      margin-top: 104px;
+      margin-left: -188px;
+      width: 100vw !important;
+      height: 71vh;
+      margin-right: -70px;
+    }
+    @include sm {
+      margin-top: 104px;
+      margin-left: -195px;
+      width: 100vw !important;
+      height: 71vh;
+      margin-right: -80px;
+    }
+  }
+  .hamburger-icon {
+    margin: auto 4% auto auto;
+    display: none;
+    color: white;
+    .MuiSvgIcon-root {
+      height: 50px !important;
+      width: 50px !important;
+    }
+    @include md_double {
+      display: block;
+    }
+  }
+}
+// header css to be applied  after scrolling header.
+.header-scroll-bg {
+  background-color: rgba(0, 0, 0, 0.9);
+}

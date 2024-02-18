@@ -1,0 +1,58 @@
+.menuCategory {
+  padding-bottom: 200px;
+}
+.menuMain {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 100px;
+  padding-bottom: 50px;
+}
+
+.menuTopRight {
+  h1 {
+    text-align: left;
+    font-family: "Fed Pig Smoke Outline";
+  }
+}
+
+.menuMainLeft {
+  padding-top: 20px;
+  .menuTopRight {
+    h1 {
+      text-align: right;
+      font-family: "Fed Pig Smoke Outline";
+    }
+  }
+}
+
+.menuTop {
+  display: flex;
+  gap: 20px;
+}
+
+@media only screen and (max-width: 720px) {
+  .menuMain {
+    display: block;
+    justify-content: center;
+  }
+  .menuTop {
+    display: block;
+    justify-content: center;
+  }
+  .menuTopRight {
+    h1 {
+      text-align: center;
+    }
+  }
+  .menuMainLeft {
+    padding-top: 20px;
+    .menuTopRight {
+      h1 {
+        text-align: center;
+        font-family: "Fed Pig Smoke Outline";
+      }
+    }
+  }
+}

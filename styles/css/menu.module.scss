@@ -1,0 +1,117 @@
+.menu {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #000000;
+  background-image: url("https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg");
+  background: linear-gradient(rgba(15, 23, 43, 0.9), rgba(15, 23, 43, 0.9)),
+    url(https://www.giulianorestaurant.co.uk/wp-content/uploads/2017/10/Giuliano-Restaurant-Antipasti.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // min-height: 200px;
+  height: auto;
+  max-width: 100%;
+  padding-top: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  // opacity: 1;
+  .heading {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    animation: slideInDown 0.5s ease;
+  }
+}
+
+.menu_title {
+  max-width: 600px;
+  text-align: center;
+  justify-content: center;
+  // padding-top: 5rem;
+  padding-bottom: 4.5rem;
+  margin-right: 0px;
+  h1 {
+    padding: 5px;
+  }
+  p {
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    color: #fff;
+  }
+
+  .heading {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    animation: slideInDown 0.5s ease;
+  }
+
+  @keyframes slideInDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
+
+.menuCategory {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.menuButtons,
+.menuButtonsOne,
+.menuButtonsTwo {
+  gap: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  // font-size: 3rem;
+  // color: #fff;
+  button {
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border-color: transparent;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .menuButtons {
+    display: block;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .menuButtonsOne {
+    padding-bottom: 20px;
+  }
+  .menuButtonsOne,
+  .menuButtonsTwo {
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    button {
+      padding: 5px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border-color: transparent;
+      cursor: pointer;
+    }
+  }
+}

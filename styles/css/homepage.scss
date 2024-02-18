@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Bebas+Neue&family=Lobster&family=Merriweather&family=PT+Serif&family=Roboto&family=Rubik+Spray+Paint&family=Secular+One&family=Shrikhand&display=swap");
+@import "./mixin.scss";
+
+.home {
+  font-family: "Roboto";
+  width: 100%;
+  // <------- CSS for home backgound image and text ------->
+  .home-img {
+    font-family: "Roboto";
+    width: 100%;
+    max-width: 100vw;
+    margin-top: -115px;
+    img {
+      width: 100%;
+      object-fit: fill;
+      height: 100vh;
+      background-size: cover;
+      background-attachment: fixed;
+      @include xsm {
+        height: 80vh;
+      }
+      @include sm {
+        height: 80vh;
+      }
+    }
+  }
+  .home-text-block {
+    width: 100%;
+    max-width: 675px;
+    position: absolute;
+    bottom: 180px;
+    color: white;
+    margin: auto auto auto 85px;
+
+    h3 {
+      margin: auto auto 40px 5px;
+      font-size: 30px;
+      @include xsm {
+        font-size: 21px;
+      }
+      @include sm {
+        font-size: 30px;
+      }
+      @include md {
+        font-size: 30px;
+      }
+    }
+    h1 {
+      font-size: 70px;
+      font-weight: 800;
+      @include xsm {
+        font-size: 37px;
+      }
+      @include sm {
+        font-size: 50px;
+      }
+      @include md {
+        font-size: 55px;
+      }
+    }
+
+    .order-btn-block {
+      width: 200px;
+      .btn-order-now {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        padding: 8px 10px;
+        font-size: 25px;
+        height: 60px;
+        border: none;
+        border-radius: 5px;
+      }
+      & :hover {
+        cursor: pointer;
+        background-color: #fbf5df;
+        border: none;
+      }
+    }
+    @include xsm {
+      margin: 0 auto 25% 3%;
+      max-width: 400px;
+    }
+    @include sm {
+      margin: 0 auto 10% 3%;
+      max-width: 480px;
+    }
+    @include md {
+      margin: 0 auto 10% 3%;
+    }
+  }
+
+  // <----------- CSS for Home Menu Block -------->
+  .home-menu-block {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 5%;
+    .menu-info {
+      display: flex;
+      justify-content: space-evenly;
+      .home-menu-itm {
+        width: 32%;
+        height: 345px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: opacity 0.4s ease;
+          z-index: 99;
+        }
+        p {
+          position: relative;
+          top: -65%;
+          visibility: hidden;
+          transform: translateY(100px);
+          transition: all 0.4s cubic-bezier(0.3, 0.1, 0.58, 1);
+          z-index: 0;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        &:hover {
+          cursor: pointer;
+          img {
+            opacity: 0.3;
+            ::before {
+              background-color: red($color: #000000);
+            }
+          }
+          p {
+            visibility: visible;
+            transform: translateY(0);
+          }
+        }
+      }
+    }
+  }
+  //<-------- CSS for about us block --------->
+  .about-us-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 100px;
+    .about-us-left-block {
+      width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      .about-us-img-1,
+      .about-us-img-2,
+      .about-us-img-3,
+      .about-us-img-4 {
+        margin: 10px;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .about-us-img-2 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        img {
+          width: 60%;
+          height: 70%;
+          margin-top: 65px;
+        }
+      }
+      .about-us-img-3 {
+        display: flex;
+        justify-content: flex-end;
+        img {
+          width: 60%;
+          height: 70%;
+        }
+      }
+      .about-us-img-1,
+      .about-us-img-3 {
+        flex: 1 1 calc(50% - 20px);
+        margin: 10px;
+      }
+
+      .about-us-img-2,
+      .about-us-img-4 {
+        flex: 1 1 calc(50% - 20px);
+        margin: 10px;
+      }
+      flex-direction: row !important;
+      @include md_double {
+        width: 100%;
+      }
+    }
+    .about-us-right-block {
+      text-align: center;
+      width: 50%;
+      @include md_double {
+        width: 100%;
+      }
+      h3 {
+        font-size: 35px;
+      }
+      h1 {
+        font-size: 25px;
+        color: orange;
+      }
+      .text-block {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        @include md_double {
+          justify-content: center;
+        }
+
+        .text-block-itm {
+          flex: 0 1 calc(50% - 20px);
+          margin: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span {
+            color: #fea116;
+            font-size: 40px;
+            font-weight: 900;
+          }
+
+          p {
+            font-weight: 600;
+          }
+        }
+      }
+      .explore-more-btn {
+        width: 219px;
+        height: 48px;
+        margin-left: 70px;
+        padding: 10px 25px;
+        @include md_double {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        button {
+          width: 100%;
+          height: 100%;
+          background: #fea116;
+          color: white;
+          font-size: 20px;
+          border: none;
+          border-radius: 5px;
+        }
+        &:hover {
+          cursor: pointer;
+          button {
+            background: #f5761a;
+          }
+        }
+      }
+    }
+    @include md_double {
+      flex-direction: column;
+    }
+  }
+    //<-------- CSS for book a talbe block --------->
+  .book-a-table-home-block {
+    margin-bottom: 100px;
+    display: flex;
+    width: 100%;
+    .book-table-left-block {
+      background: url("/images/book-a-table.jpg");
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 50%;
+      height: auto;
+      @include md_double {
+        height: 50vh;
+        width: 100%;
+      }
+    }
+    .book-table-right-block {
+      background: #0f172b !important;
+      width: 50%;
+      @include md_double {
+        width: 100%;
+      }
+      h2 {
+        text-align: center;
+        color: white;
+        font-size: 33px;
+      }
+      .contact-section {
+        margin: 45px;
+        form {
+          .date-people,
+          .name-email {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .input-field {
+              width: 15vw;
+              line-height: 2;
+              flex: 1;
+              display: flex;
+              flex-direction: column;
+              margin-right: 40px;
+              margin-bottom: 20px;
+              select {
+                width: 20vw;
+                height: 45px;
+                background: white;
+                font-size: 15px;
+                font-family: "Roboto";
+                @include md_double {
+                  width: 100%;
+                }
+              }
+              input {
+                width: 100%;
+                height: 45px;
+              }
+              .MuiOutlinedInput-root {
+                height: 45px;
+                width: 20vw;
+                background: white;
+                &::placeholder {
+                  display: none;
+                }
+                @include md_double {
+                  width: 100%;
+                }
+              }
+              label {
+                font-size: 15px;
+                color: white;
+              }
+            }
+          }
+          .input-field-text {
+            width: 95%;
+            line-height: 2;
+            textarea {
+              min-height: 20vh;
+              width: 100%;
+            }
+            label {
+              font-size: 15px;
+              color: white;
+            }
+          }
+          .check-availabilit-btn {
+            display: flex;
+            justify-content: center;
+            height: 55px;
+            button {
+              width: 100%;
+              height: 100%;
+              margin: 20px auto 0px auto;
+              color: white;
+              background: #fea116;
+              border-radius: 6px;
+              font-size: 20px;
+              border: none;
+              &:hover {
+                background: #f5761a;
+                cursor: pointer;
+              }
+            }
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    @include md_double {
+      flex-direction: column;
+    }
+  }
+    .chefs-block {
+      margin-bottom: 90px;
+      h3 {
+        font-size: 35px;
+        text-align: center;
+      }
+      .MuiSvgIcon-root {
+        font-size: 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        &:hover {
+          fill: #FF8600;
+        }
+      }
+    }
+}

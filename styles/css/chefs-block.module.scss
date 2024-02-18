@@ -1,0 +1,56 @@
+@import "./mixin.scss";
+
+.home_chefs_block {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .chefs_bg {
+    width: 300px;
+    height: 400px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: #F2F2F2;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    &:hover {
+      .chefs_img {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .chefs_img {
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+      border-radius: 50%;
+      transition: all 1s ease;
+    }
+
+  }
+
+  .icon_name_block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h5 {
+      font-size: 20px;
+      font-weight: 700;
+      color: orange;
+    }
+    span {
+      font-size: 15px;
+      margin-top: -25px;
+      margin-bottom: 20px;
+    }
+  }
+}

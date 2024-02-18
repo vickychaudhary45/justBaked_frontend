@@ -1,0 +1,78 @@
+// Media query mixins
+
+// 1px to 640px
+@mixin xsm {
+  @media (min-width: 1px) and (max-width: 640px) {
+    @content;
+  }
+}
+
+// 641 to 767
+@mixin sm {
+  @media (min-width: 641px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin screen1_510 {
+  @media (min-width: 1px) and (max-width: 510px) {
+    @content;
+  }
+}
+@mixin screen511_640 {
+  @media (min-width: 511px) and (max-width: 640px) {
+    @content;
+  }
+}
+@mixin screen1_767 {
+  @media (min-width: 1px) and (max-width: 767px) {
+    @content;
+  }
+}
+
+// 1 to 1023
+@mixin md_double {
+  @media (min-width: 1px) and (max-width: 1023px) {
+    @content;
+  }
+}
+// 768 to 1023
+@mixin md {
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// 940 to 1023
+@mixin md940_1023 {
+  @media (min-width: 940px) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+// 1024 to 1120
+@mixin screen1024_1120 {
+  @media (min-width: 1024px) and (max-width: 1120px) {
+    @content;
+  }
+}
+
+// 1024 to 1240
+@mixin screen1024_1240 {
+  @media (min-width: 1024px) and (max-width: 1240px) {
+    @content;
+  }
+}
+
+// 1024 to 1279
+@mixin laptop1024_1279 {
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    @content;
+  }
+}
+
+// 1280 to UP
+@mixin lg {
+  @media (min-width: 1280px) and (max-width: 1439px) {
+    @content;
+  }
+}
